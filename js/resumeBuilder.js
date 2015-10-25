@@ -56,11 +56,11 @@ var projects = {
     "projects": [
         {
             "title": "Interactive Resume",
-            "dates": "Fall 2015",
+            "dates": "2015",
             "description": "TBD",
             "images": [
-                "url",
-                "url"
+                "https://en.wikipedia.org/wiki/Coin#/media/File:Claudius_II_coin_(colourised).png",
+                "https://en.wikipedia.org/wiki/Coin#/media/File:Claudius_II_coin_(colourised).png"
             ]
         }
     ]
@@ -133,3 +133,37 @@ $(document).click(function(loc) {
 
     logClicks(x,y);
 });
+
+function inName(name) {
+    name = bio.name.trim().split(" ");
+    console.log(name);
+    name[1] = name[1].toUpperCase();
+    name[0] = name[0].slice(0,1).toUpperCase() + name[0].slice(1).toLowerCase();
+
+    return name[0] + " " + name[1];
+}
+
+$('#main').append(internationalizeButton);
+
+
+projects.display = function() {
+    for (var index in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedProjectTitle = HTMLprojectTitle.replace("%data%", projects.projects[index].title);
+        var formattedProjectDates = HTMLprojectDates.replace("%data%", projects.projects[index].dates);
+        var formattedProjectDescription = HTMLprojectDescription.replace("%data%", projects.projects[index].description);
+        $(".project-entry:last").append(formattedProjectTitle);
+        $(".project-entry:last").append(formattedProjectDates);
+        $(".project-entry:last").append(formattedProjectDescription);
+
+        if (projects.projects[project].images.length > 0) {
+            for (image in projects.projects[project].images) {
+                var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[index].images[image]);
+                $(".project-entry:last").append(formattedImage);
+            }
+        }
+    }
+}
+
+projects.display();
