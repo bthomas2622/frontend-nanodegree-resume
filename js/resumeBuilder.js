@@ -14,7 +14,7 @@ var bio = {
         "github": "bthomas2622"
     },
     "bioPic": "mugshot.jpg",
-    "welcomeMessage": "Welcome to my interactive resume!",
+    "welcomeMessage": "",
     "skills": [
         "Microsoft Office",
         "VBA",
@@ -92,7 +92,7 @@ var education = {
     "schools": [
         {
             "name": "Georgia Tech",
-            "dates": "2010-2014",
+            "dates": "2010-2014", //change to integer?
             "location": "Atlanta, GA",
             "degree": [
                 "BSME"
@@ -102,7 +102,7 @@ var education = {
         },
         {
             "name": "South Forsyth High School",
-            "dates": "2006-2010",
+            "dates": "2006-2010", //change to integer?
             "location": "Cumming, GA",
             "degree": [
                 "HS Diploma"
@@ -150,11 +150,6 @@ education.display = function () {
     }
 }
 
-var HTMLonlineClasses = '<h3>Online Classes</h3>';
-var HTMLonlineTitle = '<a href="#">%data%';
-var HTMLonlineSchool = ' - %data%</a>';
-var HTMLonlineDates = '<div class="date-text">%data%</div>';
-var HTMLonlineURL = '<br><a href="#">%data%</a>';
 
 education.display();
 

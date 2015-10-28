@@ -14,6 +14,13 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+.container {
+  background-color: #484848;
+}
+
+body {
+  background-color: #484848;
+}
 .clear-fix {
   overflow: auto;
 }
@@ -26,7 +33,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: white;
   line-height: 48px;
   display: inline;
 }
@@ -100,12 +107,31 @@ a {
 }
 
 #skills-h3 {
-  color: #f5ae23;
+  color: black;
   display: none;
+  text-align: center;
 }
 
-.orange {
-  background-color: #f5ae23;
+#projects {
+  padding-bottom: 15px;
+  clear:both;
+}
+
+.sectionresume2 h2 {
+  color: white;
+}
+
+.sectionresume2 p {
+  color: white;
+}
+
+.sectionresume2 .date-text {
+  color: white;
+}
+
+.connectcolor {
+  background-color: #A94442;
+  color: white;
 }
 
 .orange-text {
@@ -117,10 +143,14 @@ a {
   color: #fff;
 }
 
-.gray {
+.sectionresume {
   background-color: #f3f3f3;
   padding-bottom: 10px;
   clear:both;
+}
+
+.sectionresume h2 {
+  color: #A94442;
 }
 
 .dark-gray {
@@ -129,7 +159,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #A94442;
 }
 
 .flex-box {
@@ -151,17 +181,23 @@ ul {
 
 .biopic {
   float: left;
-  padding: 10px;
+  margin: 10px;
   width: 200px;
   display: none;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
 img {
-  padding: 10px;
+  padding: 0px;
 }
 
 span {
   padding: 5px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: black;
+  font-size: 16px;
 }
 
 #lets-connect {
